@@ -9,26 +9,7 @@ public class Numbers {
 		}
 		return result;
 	}
-
-	public String returnRomeOne(int broj) {
-		
-		String result = "";
-		
-		if (broj == 1) {
-			result = "I";
-		}
-		
-		return result;
-	}
-	
-	public String returnRomeTwoToTwo(int broj) {
-		StringBuilder result = new StringBuilder();
-		if (broj == 2) {
-			result.append("II");
-		}
-		return result.toString();
-	}
-	public String returnRomeThreeToThree(int broj) {
+	public String returnRoman1to3(int broj) {
 		StringBuilder result = new StringBuilder();
 		if (broj == 1) {
 			result.append("I");
@@ -39,39 +20,14 @@ public class Numbers {
 		}
 		return result.toString();
 	}
-	public String returnRomeFourToFour(int broj) {
+	public String returnRoman4(int broj) {
 		StringBuilder result = new StringBuilder();
-		returnRomeThreeToThree(broj);
 		if (broj == 4) {
 			result.append("IV");
 		}
 		return result.toString();
 	}
-	public String returnRomeFiveToFive(int broj) {
-		StringBuilder result = new StringBuilder();
-		returnRomeFourToFour(broj);
-		if (broj == 5) {
-			result.append("V");
-		}
-		return result.toString();
-	}
-	public String returnRomeSixToSix(int broj) {
-		StringBuilder result = new StringBuilder();
-		returnRomeFiveToFive(broj);
-		if (broj == 6) {
-			result.append("VI");
-		}
-		return result.toString();
-	}
-	public String returnRomeSevenToSeven(int broj) {
-		StringBuilder result = new StringBuilder();
-		returnRomeSixToSix(broj);
-		if (broj == 7) {
-			result.append("VII");
-		}
-		return result.toString();
-	}
-	public String returnRomeEightToEight(int broj) {
+	public String returnRoman5to8(int broj) {
 		StringBuilder result = new StringBuilder();
 		if (broj == 5) {
 			result.append("V");
@@ -97,58 +53,18 @@ public class Numbers {
 		if (broj == 0) {
 			result.append(returnEmptyStringIfZero(broj));
 		} else if (broj == 1 || broj == 2 || broj == 3) {
-			result.append(returnRomeThreeToThree(broj));
+			result.append(returnRoman1to3(broj));
 		} else if (broj == 4) {
-			result.append(returnRomeFourToFour(broj));
+			result.append(returnRoman4(broj));
 		} else if (broj == 5 || broj == 6 
 				|| broj == 7 || broj == 8) {
-			result.append(returnRomeEightToEight(broj));
+			result.append(returnRoman5to8(broj));
 		} else if (broj == 9) {
 			result.append(returnRomeNineToNine(broj));
 		}
 		return result.toString();
 	}
-	public String returnRomeTenToTen(int broj) {
-		StringBuilder result = new StringBuilder();
-			
-			if (broj == 10) {
-				result.append("X");
-			}
-		return result.toString();
-	}
-
-	public String returnRomeFromTenToTwenty(int broj) {
-		StringBuilder result = new StringBuilder();
-		
-		int jednocifreni = broj % 10;
-		int dvocifreni = broj / 10;
-		
-		String str = returnRomeOneToNine(jednocifreni);
-		if (dvocifreni == 1) {
-			result.append("X");
-			result.append(str);
-		}
-		return result.toString();
-	}
-
-	public String returnRomeTwentyToTwenty(int broj) {
-		StringBuilder result = new StringBuilder();
-
-		int jednocifreni = broj % 10;
-		int dvocifreni = broj / 10;
-
-		String str = returnRomeOneToNine(jednocifreni);
-		if (dvocifreni == 1) {
-			result.append("X");
-			result.append(str);
-		} else if (dvocifreni == 2) {
-			result.append("XX");
-			result.append(str);
-		}
-		return result.toString();
-	}
-
-	public String returnRomeThirtyToThirty(int broj) {
+	public String returnRoman10to30(int broj) {
 		StringBuilder result = new StringBuilder();
 
 		int jednocifreni = broj % 10;
@@ -168,7 +84,7 @@ public class Numbers {
 		return result.toString();
 	}
 
-	public String returnRomeFourtyToFourty(int broj) {
+	public String returnRoman40(int broj) {
 		StringBuilder result = new StringBuilder();
 
 		int jednocifreni = broj % 10;
@@ -181,63 +97,7 @@ public class Numbers {
 		}
 		return result.toString();
 	}
-
-	public String returnRomeFiftyToFifty(int broj) {
-		StringBuilder result = new StringBuilder();
-
-		int jednocifreni = broj % 10;
-		int dvocifreni = broj / 10;
-
-		String str = returnRomeOneToNine(jednocifreni);
-		if (dvocifreni == 5) {
-			result.append("L");
-			result.append(str);
-		}
-		return result.toString();
-	}
-
-	public String returnRomeSixtyToSixty(int broj) {
-		StringBuilder result = new StringBuilder();
-
-		int jednocifreni = broj % 10;
-		int dvocifreni = broj / 10;
-
-		String str = returnRomeOneToNine(jednocifreni);
-		if (dvocifreni == 6) {
-			result.append("LX");
-			result.append(str);
-		}
-		return result.toString();
-	}
-
-	public String returnRomeSeventyToSeventy(int broj) {
-		StringBuilder result = new StringBuilder();
-
-		int jednocifreni = broj % 10;
-		int dvocifreni = broj / 10;
-
-		String str = returnRomeOneToNine(jednocifreni);
-		if (dvocifreni == 7) {
-			result.append("LXX");
-			result.append(str);
-		}
-		return result.toString();
-	}
-
-	public String returnRomeEightyToEighty(int broj) {
-		StringBuilder result = new StringBuilder();
-
-		int jednocifreni = broj % 10;
-		int dvocifreni = broj / 10;
-
-		String str = returnRomeOneToNine(jednocifreni);
-		if (dvocifreni == 8) {
-			result.append("LXXX");
-			result.append(str);
-		}
-		return result.toString();
-	}
-	public String returnRomeFromFiftyToEighty(int broj) {
+	public String returnRoman50to80(int broj) {
 		StringBuilder result = new StringBuilder();
 
 		int jednocifreni = broj % 10;
@@ -259,7 +119,7 @@ public class Numbers {
 		}
 		return result.toString();
 	}
-	public String returnRomeNinetyToNinety(int broj) {
+	public String returnRoman90(int broj) {
 		StringBuilder result = new StringBuilder();
 
 		int jednocifreni = broj % 10;
@@ -278,14 +138,14 @@ public class Numbers {
 		int dvocifreni = broj / 10;
 		
 		if (dvocifreni == 1 || dvocifreni == 2 || dvocifreni == 3) {
-			result.append(returnRomeThirtyToThirty(broj));
+			result.append(returnRoman10to30(broj));
 		} else if (dvocifreni == 4) {
-			result.append(returnRomeFourtyToFourty(broj));
+			result.append(returnRoman40(broj));
 		} else if (dvocifreni == 5 || dvocifreni == 6
 				   || dvocifreni == 7 || dvocifreni == 8) {
-			result.append(returnRomeFromFiftyToEighty(broj));
+			result.append(returnRoman50to80(broj));
 		} else if (dvocifreni == 9) {
-			result.append(returnRomeNinetyToNinety(broj));
+			result.append(returnRoman90(broj));
 		}
 		return result.toString();
 	}
@@ -296,28 +156,18 @@ public class Numbers {
 		int jednocifreni = broj % 10;
 		
 		if (dvocifreni == 1 || dvocifreni == 2 || dvocifreni == 3) {
-			result.append(returnRomeThirtyToThirty(broj));
+			result.append(returnRoman10to30(broj));
 			result.append(returnRomeOneToNine(jednocifreni));
 		} else if (dvocifreni == 4) {
-			result.append(returnRomeFourtyToFourty(broj));
+			result.append(returnRoman40(broj));
 			result.append(returnRomeOneToNine(jednocifreni));
 		} else if (dvocifreni == 5 || dvocifreni == 6
 				   || dvocifreni == 7 || dvocifreni == 8) {
-			result.append(returnRomeFromFiftyToEighty(broj));
+			result.append(returnRoman50to80(broj));
 			result.append(returnRomeOneToNine(jednocifreni));
 		} else if (dvocifreni == 9) {
-			result.append(returnRomeNinetyToNinety(broj));
+			result.append(returnRoman90(broj));
 			result.append(returnRomeOneToNine(jednocifreni));
-		}
-		return result.toString();
-	}
-	public String returnRomeHundred(int broj) {
-		StringBuilder result = new StringBuilder();
-		
-		int trocifreni = broj / 100;
-		
-		if (trocifreni == 1) {
-			result.append("C");
 		}
 		return result.toString();
 	}
@@ -342,16 +192,6 @@ public class Numbers {
 		
 		if (trocifreni == 4) {
 			result.append("CD");
-		}
-		return result.toString();
-	}
-	public String returnRome500(int broj) {
-		StringBuilder result = new StringBuilder();
-		
-		int trocifreni = broj / 100;
-		
-		if (trocifreni == 5) {
-			result.append("D");
 		}
 		return result.toString();
 	}
@@ -381,24 +221,6 @@ public class Numbers {
 		}
 		return result.toString();
 	}
-	public String returnRomeFrom100to900(int broj) {
-		StringBuilder result = new StringBuilder();
-		
-		int trocifreni = broj / 100;
-		
-		if (trocifreni == 1 || trocifreni == 2
-			|| trocifreni == 3) {
-			result.append(returnRomeFrom100to300(broj));
-		} else if (trocifreni == 4) {
-			result.append(returnRome400(broj));
-		} else if (trocifreni == 5 || trocifreni == 6
-				   || trocifreni == 7 || trocifreni == 8) {
-			result.append(returnRomeFrom500to800(broj));
-		} else if (trocifreni == 9) {
-			result.append(returnRome900(broj));
-		}
-		return result.toString();
-	}
 	public String returnRomeFrom1to999(int broj) {
 		StringBuilder result = new StringBuilder();
 		
@@ -425,16 +247,6 @@ public class Numbers {
 			result.append(returnRome900(broj));
 			result.append(returnRomeFrom10to99(dvocifreni));
 			result.append(returnRomeOneToNine(jednocifreni));
-		}
-		return result.toString();
-	}
-	public String returnRome1000(int broj) {
-		StringBuilder result = new StringBuilder();
-		
-		int _4cifreni = broj / 1000;
-		
-		if (_4cifreni == 1) {
-			result.append("M");
 		}
 		return result.toString();
 	}
